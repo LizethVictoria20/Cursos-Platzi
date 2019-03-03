@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS-Grid</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    .container{
+      display: grid;
+      /*grid-template: filas / columnas*/
+      grid-template: 150px 1fr 100px/ 300px 1fr;
+       /*grid-gap: filas columnas*/
+       grid-gap: 10px;
+       height: 100vh; /*Ocupa todo el ancho de la pagina*/
+       grid-template-areas: "header header" /*Siempre se debe tener dos areas*/
+                            "left contenido"
+                            "footer footer"
+
+    }
+    .item{
+      border: 1px solid lightcoral;
+      background: lightblue;
+      padding: 10px;
+
+    }
+
+    .item .item{
+      background: #9F81F7;
+
+    }
+    .header{
+      /*Solo se le pone a los items de un container*/
+      grid-area: header;
+      background-color: #81BEF7;
+      border-radius: 20px;
+    }
+    .left{
+      grid-area: left;
+      background-color: #8181F7;
+      border-radius: 20px;
+
+    }
+    .contenido{
+      grid-area: contenido;
+      background-color: #BE81F7;
+      border-radius: 20px;
+    }
+    .footer{
+      grid-area: footer;
+      background-color: #81F7BE;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <div class="item header">Header</div>
+    <div class="item left">Left</div>
+    <div class="item contenido">Contenido</div>
+    <div class="item footer">Footer</div>
+  </section>
+</body>
+</html>

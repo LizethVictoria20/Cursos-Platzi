@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tamaño de items en columnas</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      /*grid-template: filas / columnas*/
+      /*grid-template: 150px 1fr 100px/ 300px 1fr;*/
+       /*grid-gap: filas columnas*/
+       grid-gap: 10px;
+       height: 100vh; /*Ocupa todo el ancho de la pagina*/
+
+
+    }
+    .item{
+      border: 1px solid lightcoral;
+      background: lightblue;
+      padding: 10px;
+
+    }
+
+    .item:nth-of-type(1){
+      background: #8181F7;
+      grid-column-start:1; /*Endonde empieza el tamaño*/
+      grid-column-end: 3; /*Toma no las columnas, sino las lineas que hay desde donde se toma*/
+    }
+    .item:nth-of-type(8){
+      grid-column: 1 / 4 /*Es lo mismo que start y end*/
+    }
+    .item:nth-of-type(7){
+      /*grid-column: 2 / span 2; /*span se usa cuando no se sabe donde va aterminar, pero se le está diciendo que solo ocupe dos espacios al terminar*/
+      grid-column: 1 / -1  /*Esto ocupara todas las columnas existentes, sin importar cuantas hallan*/
+    }
+
+  </style>
+</head>
+<body>
+  <section class="container">
+ <div class="item">item #1</div>
+ <div class="item">item #2</div>
+ <div class="item">item #3</div>
+ <div class="item">item #4</div>
+ <div class="item">item #5</div>
+ <div class="item">item #6</div>
+ <div class="item">item #7</div>
+ <div class="item">item #8</div>
+ <div class="item">item #9</div>
+ <div class="item">item #10</div>
+ <div class="item">item #11</div>
+ <div class="item">item #12</div>
+  </section>
+</body>
+</html>
