@@ -1,0 +1,29 @@
+body {
+  background-color: rgba(185, 183, 183, 0.822);
+}
+
+
+
+
+p, h1, h2{
+  color: rgb(255, 0, 221);
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-style: fantasy;
+
+}
+
+h2{
+  font-size: 25px;
+  text-align: height;
+}
+p {
+  font: oblique bold 120% cursive;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0px;
+}
+
